@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import NoteTextInput from './NoteTextInput'
 
+const fontStyle = {
+  fontFamily: 'Lato, Arial, sans-serif'
+};
+
+
 export default class NoteItem extends Component {
   static propTypes = {
     note: PropTypes.object.isRequired,
@@ -39,7 +44,7 @@ export default class NoteItem extends Component {
       )
     } else {
       element = (
-        <div className="view">
+        <div className="view" style={fontStyle}>
           <button className="destroy-btn"
                   onClick={() => deleteNote(note.id)} />
           <button className="edit-btn"

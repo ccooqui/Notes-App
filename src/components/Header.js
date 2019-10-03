@@ -2,10 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import NoteTextInput from './NoteTextInput'
 
+const fontStyle = {
+    fontFamily: 'Lato, Arial, sans-serif'
+};
+
 
 const Header = ({ addNote }) => (
   <header className="header">
-    <h2 className="new-header">New Note</h2>
+    <h2 className="new-header" style={fontStyle}>New Note</h2>
     <NoteTextInput
       newNote
       onSave={(text) => {
